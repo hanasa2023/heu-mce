@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: false,
   devServer: { host: [process.env.TAURI_DEV_HOST || 'localhost'] },
-  modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss'],
+  modules: ['@primevue/nuxt-module', '@nuxtjs/tailwindcss', '@pinia/nuxt'],
   srcDir: 'src/',
   tailwindcss: {},
   primevue: {
@@ -14,11 +14,11 @@ export default defineNuxtConfig({
       theme: {
         preset: Aura,
         options: {
-            cssLayer: {
-                name: 'primevue',
-                order: 'tailwind-base, primevue, tailwind-utilities'
-            }
-        }
+          cssLayer: {
+            name: 'primevue',
+            order: 'tailwind-base, primevue, tailwind-utilities',
+          },
+        },
       },
     },
   },

@@ -1,4 +1,4 @@
-import CryptoJS from 'crypto-js'
+import CryptoJS from "crypto-js"
 
 export const aesUtil = {
   encrypt: function (t: string, r: string) {
@@ -24,5 +24,3 @@ export const aesUtil = {
     )
   },
 }
-
-export * from './constants'
